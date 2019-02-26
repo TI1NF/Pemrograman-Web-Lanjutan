@@ -15,11 +15,19 @@
 - Jika sudah selesai download project yii2 maka lakukan perintah berikut :
     - Buka Browser
     - Buka URL : http://localhost/basic/web
-    - Jika ada tulisan Congratulations! maka project berhasil terinstall
-- Kemudian coba tekan menu Home di navigasi bar di atas kanan maka URL tersebut menjadi seperti http://localhost/basic/web/index.php?r=site%2Findex URL tersebut sulit dihafal dan untuk mempermudah menghafal URLnya maka lakukan langkah berikut :
+    - Jika ada tulisan Congratulations! maka project berhasil terinstall seperti gambar berikut
+
+![Image description](image/berhasil.png)
+
+- Kemudian coba tekan menu Home di navigasi bar di atas kanan maka URL tersebut menjadi seperti http://localhost/basic/web/index.php?r=site%2Findex URL tersebut sulit dihafal seperti gambar berikut :
+
+![Image description](image/url1.png)
+
+- Untuk mempermudah menghafal URLnya maka lakukan langkah berikut :
     - Buka file basic/config/web.php
     - Pada baris 46 dan 53 hapus /* */ untuk menghilangkan komentarnya dan mengaktifkan 'urlManager' (Lihat pada file basic/config/web.php diatas)
         - Sebelumnya :
+
 ```
 /*
 'urlManager' => [
@@ -30,7 +38,9 @@
 ],
 */
 ```    
-        - Setelahnya :
+
+- Setelahnya :
+
 ```
 'urlManager' => [
     'enablePrettyUrl' => true,
@@ -39,7 +49,9 @@
     ],
 ],
 ```     
-    - Kemudian buat file baru pada basic/web/.htaccess dengan isi berikut : 
+
+- Kemudian buat file baru pada basic/web/.htaccess dengan isi berikut :
+
 ```
 RewriteEngine on
 # If a directory or a file exists, use it directly
@@ -48,13 +60,18 @@ RewriteCond %{REQUEST_FILENAME} !-d
 # Otherwise forward it to index.php
 RewriteRule . index.php
 ```
-- Kemudian refresh halaman web tadi dan tekan menu Home kembali apakah sudah menjadi http://localhost/basic/web/site/index jika sudah, maka berhasil mengganti URLnya
+
+- Kemudian refresh halaman web tadi dan tekan menu Home kembali apakah sudah menjadi http://localhost/basic/web/site/index jika sudah, maka berhasil mengganti URLnya seperti gambar berikut :
+
+![Image description](image/url2.png)
+
 - Jika halaman tersebut error maka lakukan langkah berikut :
     - Buka Terminal dan ketik perintah berikut
     - a2enmod rewrite
     - service apache2 restart
     - sudo nano /etc/apache2/apache2.conf
     - Cari syntax berikut yang sebelumnya :
+
 ```
 <Directory /var/www/>
     Options Indexes FollowSymLinks
@@ -62,7 +79,9 @@ RewriteRule . index.php
     Require all granted
 </Directory>
 ```
+
     - Kemudian ubah menjadi :
+
 ```
 <Directory /var/www/>
     Options Indexes FollowSymLinks
@@ -70,8 +89,9 @@ RewriteRule . index.php
     Require all granted
 </Directory>
 ```
-    - service apache2 restart
-    - Coba Kembali
+
+- service apache2 restart
+- Coba Kembali
 - Sekian
 
 # Referensi
