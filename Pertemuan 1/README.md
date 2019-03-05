@@ -67,8 +67,8 @@ RewriteRule . index.php
 
 - Jika halaman tersebut error maka lakukan langkah berikut :
     - Buka Terminal dan ketik perintah berikut
-    - a2enmod rewrite
-    - service apache2 restart
+    - sudo a2enmod rewrite
+    - sudo service apache2 restart
     - sudo nano /etc/apache2/apache2.conf
     - Cari syntax berikut yang sebelumnya :
 
@@ -80,7 +80,7 @@ RewriteRule . index.php
 </Directory>
 ```
 
-    - Kemudian ubah menjadi :
+- Kemudian ubah menjadi :
 
 ```
 <Directory /var/www/>
