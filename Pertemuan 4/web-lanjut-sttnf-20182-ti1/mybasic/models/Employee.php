@@ -10,4 +10,13 @@ class Employee extends ActiveRecord
   {
     return 'employee';
   }
+
+  public function rules()
+  {
+    return [
+      [['name','age'], 'required'],
+      [['name'], 'string'],
+      [['age'], 'integer'],
+    ];
+  }
 }
