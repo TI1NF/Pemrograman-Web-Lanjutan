@@ -1,4 +1,4 @@
-# Pengantar Framework Yii2
+# Requirement Framework Yii 2
 
 - Sebelum menggunakan framework yii2 perlu menginstall program composer untuk mendownload projectnya, berikut cara install program composer pada sistem operasi Linux :
     - Buka Terminal dan ketik perintah berikut
@@ -7,11 +7,17 @@
     - sudo mv composer.phar /usr/local/bin/composer
     - composer
     - composer self-update
+
+# Download Project Yii 2
+
 - Jika composer sudah terinstall maka lanjut dengan mendownload project yii2 seperti berikut :
     - Buka Terminal
     - cd /var/www/html atau cd /opt/lampp/htdocs
     - composer create-project yiisoft/yii2-app-basic basic
         - Kata basic diakhir kalimat merupakan nama project yang akan dibuat
+
+# Open Project Yii 2
+
 - Jika sudah selesai download project yii2 maka lakukan perintah berikut :
     - Buka Browser
     - Buka URL : http://localhost/basic/web
@@ -22,6 +28,8 @@
 - Kemudian coba tekan menu Home di navigasi bar di atas kanan maka URL tersebut menjadi seperti http://localhost/basic/web/index.php?r=site%2Findex URL tersebut sulit dihafal seperti gambar berikut :
 
 ![Image description](image/url1.png)
+
+# Short URL
 
 - Untuk mempermudah menghafal URLnya maka lakukan langkah berikut :
     - Buka file basic/config/web.php
