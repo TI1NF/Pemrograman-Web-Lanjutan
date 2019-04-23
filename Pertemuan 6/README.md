@@ -12,6 +12,17 @@
 
 - http://localhost/web-lanjut-sttnf-20182-ti1/praktikum02/web/
 - Rename htaccess.txt menjadi .htaccess
+- Jika belum ada maka buat file .htaccess seperti praktikum02/.htaccess dan masukkan kode berikut
+```
+# prevent directory listings
+Options -Indexes
+IndexIgnore */*
+ 
+# follow symbolic links
+Options FollowSymlinks
+RewriteEngine on
+RewriteRule ^(.+)?$ web/$1
+```
 - Buka config/web.php
     - Tambahkan baris 15 code 'homeUrl' => '/web-lanjut-sttnf-20182-ti1/praktikum02',
     - Tambahkan baris 20 code 'baseUrl' => '/web-lanjut-sttnf-20182-ti1/praktikum02',
