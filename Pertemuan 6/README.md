@@ -8,7 +8,7 @@
 - git checkout -b 0110217029_azhar
 - Copy folder vendor dari project mybasic ke praktikum02
 
-# Short URL
+# Menghilangkan /web
 
 - http://localhost/web-lanjut-sttnf-20182-ti1/praktikum02/web/
 - Rename htaccess.txt menjadi .htaccess

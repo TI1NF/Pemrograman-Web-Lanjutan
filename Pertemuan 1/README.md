@@ -29,7 +29,7 @@
 
 ![Image description](image/url1.png)
 
-# Short URL
+# Pretty URL
 
 - Untuk mempermudah menghafal URLnya maka lakukan langkah berikut :
     - Buka file basic/config/web.php
